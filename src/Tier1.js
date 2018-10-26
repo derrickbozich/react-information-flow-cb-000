@@ -24,7 +24,9 @@ export default class Tier1 extends Component {
 
   handleChildClick = event => {
     event.stopPropagation()
-
+    this.setState({
+      childColor: newColor
+    })
     console.log("2")
   }
   render() {
