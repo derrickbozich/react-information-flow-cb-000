@@ -15,7 +15,7 @@ export default class Tier1 extends Component {
   }
 
   updateColor = () => {
-    let oldColor = this.state.color
+    // let oldColor = this.state.color
     let newColor = getRandomColor()
     this.setState({
       color: newColor
@@ -24,7 +24,7 @@ export default class Tier1 extends Component {
 
   handleChildClick = event => {
     event.stopPropagation()
-    
+
     console.log("2")
   }
   render() {
