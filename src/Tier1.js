@@ -14,6 +14,12 @@ export default class Tier1 extends Component {
     }
   }
 
+  updateColor = () => {
+    this.setState({
+      color: getRandomColor()
+    })
+  }
+
   render() {
     // hard coded color values have been added below, though they won't be
     // present in our solution. What should they be replaced with?
