@@ -23,6 +23,7 @@ export default class Tier2 extends Component {
     this.setState({
       color: getRandomColor()
     })
+    debugger
   }
 
   render() {
