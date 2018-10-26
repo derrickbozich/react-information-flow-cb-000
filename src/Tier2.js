@@ -19,7 +19,9 @@ export default class Tier2 extends Component {
     })
   }
 
-
+  handleClick = () => {
+    debugger
+  }
 
   render() {
     // hard coded color values have been added below, though they won't be
