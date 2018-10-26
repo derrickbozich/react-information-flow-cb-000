@@ -15,20 +15,13 @@ export default class Tier1 extends Component {
     }
   }
 
-
-  updateColors = () => {
-    let oldColor = this.state.color
+  generateColorsForAll = () => {
     let newColor = getRandomColor()
     this.setState({
       color: newColor,
       childColor: getReducedColor(newColor)
+      grandChildColor: getReducedColor(getReducedColor(newColor))
     })
-  }
-
-  handleChildClick = event => {
-    event.stopPropagation()
-
-    console.log("2")
   }
   render() {
     // hard coded color values have been added below, though they won't be
