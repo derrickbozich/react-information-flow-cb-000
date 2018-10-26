@@ -26,7 +26,7 @@ export default class Tier2 extends Component {
   }
 
   shouldComponentUpdate(){
-    return this.props.color === this.state.color
+    return this.props.color !== this.state.color
   }
 
   render() {
