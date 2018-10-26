@@ -14,7 +14,7 @@ export default class Tier2 extends Component {
 
   componentWillReceiveProps(nextProps){
     this.setState({
-      color: nextProps.color,
+      color: nextProps.color
     })
   }
 
