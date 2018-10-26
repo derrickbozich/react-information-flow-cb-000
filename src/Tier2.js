@@ -33,7 +33,7 @@ export default class Tier2 extends Component {
     return (
       <div onClick={(e) => this.props.handleChildClick(e)} className="tier2" style={{backgroundColor: this.props.color, color: this.props.color}}>
         <Tier3 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)} />
-        <Tier3 color={this.state.childColor} />
+        <Tier3 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)} />
       </div>
     )
   }
