@@ -59,8 +59,8 @@ export default class Tier1 extends Component {
     // present in our solution. What should they be replaced with?
     return (
       <div onClick={this.handleClick} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
-        <Tier2 color={this.state.childColor} childColor={this.state.grandChildColor} handleClick={e => this.handleChildClick} handleChildClick={e => this.handleGrandChildClick} />
-        <Tier2 color={this.state.childColor} childColor={this.state.grandChildColor} handleClick={e => this.handleChildClick} handleChildClick={e => this.handleGrandChildClick} />
+        <Tier2 color={this.state.childColor} childColor={this.state.grandChildColor} handleClick={e => this.handleChildClick(e)} handleChildClick={e => this.handleGrandChildClick(e)} />
+        <Tier2 color={this.state.childColor} childColor={this.state.grandChildColor} handleClick={e => this.handleChildClick(e)} handleChildClick={e => this.handleGrandChildClick(e)} />
       </div>
     )
   }
