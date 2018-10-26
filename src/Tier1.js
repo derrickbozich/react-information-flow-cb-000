@@ -15,12 +15,11 @@ export default class Tier1 extends Component {
     }
   }
 
-  generateColorsForAll = () => {
+  updateColor = () => {
     let newColor = getRandomColor()
     this.setState({
       color: newColor,
-      childColor: getReducedColor(newColor),
-      grandChildColor: getReducedColor(getReducedColor(newColor))
+      childColor: getReducedColor(newColor)
     })
   }
   render() {
