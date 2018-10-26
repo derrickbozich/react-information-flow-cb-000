@@ -14,26 +14,17 @@ export default class Tier1 extends Component {
     }
   }
 
-  // componentWillReceiveProps(){
-  //   let oldColor = this.state.color
-  //   let newColor = getRandomColor()
-  //   this.setState({
-  //     color: newColor,
-  //     childColor: getReducedColor(newColor)
-  //   })
-  // }
-
-  updateColors = () => {
+  updateColor = () => {
     let oldColor = this.state.color
     let newColor = getRandomColor()
     this.setState({
-      color: newColor,
-      childColor: getReducedColor(newColor)
+      color: newColor
     })
   }
 
   handleChildClick = event => {
     event.stopPropagation()
+    
     console.log("2")
   }
   render() {
@@ -41,7 +32,7 @@ export default class Tier1 extends Component {
     // present in our solution. What should they be replaced with?
     return (
       // <div onClick={() => {this.setState({color: this.state.color })}} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
-      <div onClick={() => this.updateColors()} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
+      <div onClick={() => this.updateColor()} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
         <Tier2 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)}  />
         <Tier2 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)} />
       </div>
