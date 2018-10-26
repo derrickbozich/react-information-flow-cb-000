@@ -1,4 +1,5 @@
 import React from 'react'
+import { getRandomColor } from './randomColorGenerator.js'
 
 
 const Tier3 = (props) => (
