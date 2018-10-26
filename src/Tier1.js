@@ -5,8 +5,8 @@ import Tier2 from './Tier2'
 
 export default class Tier1 extends Component {
 
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     const initialColor = getRandomColor()
     this.state = {
       color: initialColor,
