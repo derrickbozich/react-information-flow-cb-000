@@ -27,8 +27,7 @@ export default class Tier1 extends Component {
   updateColor = () => {
     let newColor = getRandomColor()
     this.setState({
-      color: newColor,
-      childColor:
+      color: newColor
     })
   }
 
