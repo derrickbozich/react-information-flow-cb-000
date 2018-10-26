@@ -20,6 +20,7 @@ export default class Tier2 extends Component {
   }
 
   handleClick = (e) => {
+    e.stopProgagation()
     let newColor = getRandomColor()
     this.setState({
       color: newColor,
