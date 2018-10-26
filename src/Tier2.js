@@ -18,12 +18,15 @@ export default class Tier2 extends Component {
       color: nextProps.color
     })
   }
+  handleClick = () => {
+    debugger
+  }
 
   render() {
     // hard coded color values have been added below, though they won't be
     // present in our solution. What should they be replaced with?
     return (
-      <div onClick={this.setState({color: getRandomColor()})} className="tier2" style={{backgroundColor: this.state.color, color: this.state.color}}>
+      <div onClick={this.handleClick()} className="tier2" style={{backgroundColor: this.state.color, color: this.state.color}}>
         <Tier3 color={"#0F0"} />
         <Tier3 color={"#F00"} />
       </div>
