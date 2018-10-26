@@ -36,6 +36,13 @@ export default class Tier1 extends Component {
 
   handleChildClick = (e) => {
     e.stopPropagation()
+    const [c2, c3] = this.generateColors(2)
+    this.setState({
+      childColor: c2,
+      grandChildColor: c3
+    })
+
+
   }
 
   handleGrandChildClick = (e) => {
