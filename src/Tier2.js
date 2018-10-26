@@ -21,8 +21,10 @@ export default class Tier2 extends Component {
 
   handleClick = () => {
     debugger
+    let newColor = getRandomColor()
     this.setState({
-      childColor: getReducedColor(this.props.color)
+      color: newColor,
+      childColor: getReducedColor(newColor)
     })
   }
 
