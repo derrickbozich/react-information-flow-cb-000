@@ -26,6 +26,10 @@ export default class Tier2 extends Component {
     debugger
   }
 
+  shouldComponentUpdate(nextProps){
+    return nextProps.color === this.state.color
+  }
+
   render() {
     // hard coded color values have been added below, though they won't be
     // present in our solution. What should they be replaced with?
