@@ -19,7 +19,7 @@ export default class Tier1 extends Component {
     // present in our solution. What should they be replaced with?
     return (
       <div onClick={() => {this.setState({color: "#000"})}} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
-        <Tier2 color={"#0F0"} />
+        <Tier2 color={(getReducedColor(this.state.color)} />
         <Tier2 color={"#0FF"} />
       </div>
     )
