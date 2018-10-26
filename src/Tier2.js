@@ -13,11 +13,11 @@ export default class Tier2 extends Component {
     }
   }
 
-  // componentWillReceiveProps(nextProps){
-  //   this.setState({
-  //     color: nextProps.color
-  //   })
-  // }
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      color: nextProps.color
+    })
+  }
 
   render() {
     // hard coded color values have been added below, though they won't be
