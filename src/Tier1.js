@@ -1,6 +1,5 @@
-
 import React, { Component } from 'react'
-import { getReducedColor, getRandomColor } from './randomColorGenerator.js'
+import { getRandomColor, getReducedColor } from './randomColorGenerator.js'
 import Tier2 from './Tier2'
 
 
@@ -12,12 +11,13 @@ export default class Tier1 extends Component {
     this.state = {
       color: c1,
       childColor: c2,
-      grandchildColor: c3
+      grandChildColor: c3
     }
   }
 
   generateColors = (count=3) => {
     const colors = [getRandomColor()]
+
     for (let idx = 1; idx < count; idx++) {
       colors.push(getReducedColor(colors[colors.length - 1]))
     }
@@ -29,8 +29,9 @@ export default class Tier1 extends Component {
     this.setState({
       color: c1,
       childColor: c2,
-      grandchildColor: c3
+      grandChildColor: c3
     })
+
   }
 
   handleChildClick = (e) => {
@@ -38,23 +39,23 @@ export default class Tier1 extends Component {
     const [c2, c3] = this.generateColors(2)
     this.setState({
       childColor: c2,
-      grandchildColor: c3
+      grandChildColor: c3
     })
+
+
   }
 
-  handleGrandchildClick = (e) => {
-    e.stopPropagation()
-    const [c3] = this.generateColors(1)
-    this.setState({
-      grandchildColor: c3
-    })
+  handleGrandChildClick = (e) => {
+
   }
 
   render() {
+    // hard coded color values have been added below, though they won't be
+    // present in our solution. What should they be replaced with?
     return (
       <div onClick={this.handleClick} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
-        <Tier2 handleClick={this.handleChildClick} handleChildClick={this.handleGrandchildClick} color={this.state.childColor} childColor={this.state.grandchildColor} />
-        <Tier2 handleClick={this.handleChildClick} handleChildClick={this.handleGrandchildClick} color={this.state.childColor} childColor={this.state.grandchildColor} />
+        <Tier2 color={this.state.childColor} childColor={this.state.grandChildColor} handleClick={e => this.handleChildClick} handleChildClick={e => this.handleGrandChildClick} />
+        <Tier2 color={this.state.childColor} childColor={this.state.grandChildColor} handleClick={e => this.handleChildClick} handleChildClick={e => this.handleGrandChildClick} />
       </div>
     )
   }
