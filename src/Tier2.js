@@ -26,6 +26,8 @@ export default class Tier2 extends Component {
     })
   }
 
+  
+
 
 
   render() {
