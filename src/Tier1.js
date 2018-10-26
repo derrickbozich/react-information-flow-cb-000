@@ -5,8 +5,8 @@ import Tier2 from './Tier2'
 
 export default class Tier1 extends Component {
 
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     const initialColor = getRandomColor()
     this.state = {
       color: initialColor,
@@ -14,9 +14,19 @@ export default class Tier1 extends Component {
     }
   }
 
+  generateColors = (count=3) => {
+    const colors = [getRandomColor()]
+    for (let idx = 1; idx < count; idx++) {
+      colors.push(getReducedColor(colors[colors.length - 1]))
+    }
+    return colors
+  }
+
   updateColor = () => {
+    let newColor = getRandomColor()
     this.setState({
-      color: getRandomColor()
+      color: newColor,
+      childColor: 
     })
   }
 
