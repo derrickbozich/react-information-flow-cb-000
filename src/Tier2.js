@@ -21,6 +21,9 @@ export default class Tier2 extends Component {
 
   handleClick = () => {
     debugger
+    this.setState({
+      childColor: getReducedColor(this.props.color)
+    })
   }
 
   render() {
