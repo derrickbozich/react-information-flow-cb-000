@@ -17,6 +17,7 @@ export default class Tier1 extends Component {
 
   generateColors = (count=3) => {
     const colors = [getRandomColor()]
+    debugger
     for (let idx = 1; idx < count; idx++) {
       colors.push(getReducedColor(colors[colors.length - 1]))
     }
