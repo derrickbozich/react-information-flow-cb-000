@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getReducedColor } from './randomColorGenerator.js'
+import { getRandomColor, getReducedColor } from './randomColorGenerator.js'
 import Tier3 from './Tier3'
 
 
