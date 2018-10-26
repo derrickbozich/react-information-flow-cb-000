@@ -23,12 +23,11 @@ export default class Tier2 extends Component {
     this.setState({
       color: getRandomColor()
     })
-    debugger
   }
 
-  shouldComponentUpdate(nextProps){
-    return nextProps.color === this.state.color
-  }
+  // shouldComponentUpdate(nextProps){
+  //   return nextProps.color === this.state.color
+  // }
 
   render() {
     // hard coded color values have been added below, though they won't be
