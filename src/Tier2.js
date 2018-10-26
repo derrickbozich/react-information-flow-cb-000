@@ -19,10 +19,7 @@ export default class Tier2 extends Component {
     })
   }
 
-  handleChildClick = event => {
-    event.stopPropagation()
-    console.log("3")
-  }
+
 
   render() {
     // hard coded color values have been added below, though they won't be
@@ -31,9 +28,9 @@ export default class Tier2 extends Component {
     let p = this.props
 
     return (
-      <div onClick={(e) => this.props.handleChildClick(e)} className="tier2" style={{backgroundColor: this.props.color, color: this.props.color}}>
-        <Tier3 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)} />
-        <Tier3 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)} />
+      <div onClick={ this.props.handleChildClick} className="tier2" style={{backgroundColor: this.props.color, color: this.props.color}}>
+        <Tier3 />
+        <Tier3  />
       </div>
     )
   }
