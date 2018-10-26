@@ -19,7 +19,7 @@ export default class Tier2 extends Component {
     })
   }
 
-  handleClick = () => {
+  handleClick = (e) => {
     let newColor = getRandomColor()
     this.setState({
       color: newColor,
@@ -34,7 +34,7 @@ export default class Tier2 extends Component {
     let p = this.props
 
     return (
-      <div onClick={this.handleClick } className="tier2" style={{backgroundColor: this.state.color, color: this.state.color}}>
+      <div onClick={e => this.handleClick } className="tier2" style={{backgroundColor: this.state.color, color: this.state.color}}>
         <Tier3 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)} />
         <Tier3 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)} />
       </div>
