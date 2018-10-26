@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getRandomColor, getReducedColor } from './randomColorGenerator.js'
+import {  getReducedColor } from './randomColorGenerator.js'
 import Tier3 from './Tier3'
 
 
@@ -18,6 +18,7 @@ export default class Tier2 extends Component {
       color: nextProps.color
     })
   }
+  
   handleClick = () => {
     debugger
   }
