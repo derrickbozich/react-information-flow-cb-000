@@ -6,7 +6,7 @@ const Tier3 = (props) => (
 
 
   // this component does not need to change (but feel free to change however you like!)
-  <div className="tier3" onClick={console.log('3')} style={{backgroundColor: color, color: color}}></div>
+  <div className="tier3" onClick={console.log('3')} style={{backgroundColor: props.color, color: props.color}}></div>
 )
 
 export default Tier3
