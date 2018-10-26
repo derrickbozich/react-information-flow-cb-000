@@ -21,7 +21,7 @@ export default class Tier2 extends Component {
   }
 
   handleClick = (e) => {
-    e.stopPropagation()
+    // e.stopPropagation()
     console.log("2")
     let newColor = getRandomColor()
     this.setState({
