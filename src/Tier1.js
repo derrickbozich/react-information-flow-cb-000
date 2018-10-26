@@ -11,23 +11,23 @@ export default class Tier1 extends Component {
     this.state = {
       color: initialColor,
       childColor: getReducedColor(initialColor)
+      grandChildColor: getReducedColor(getReducedColor(initialColor))
     }
   }
 
-  updateColor = () => {
-    // let oldColor = this.state.color
+
+  updateColors = () => {
+    let oldColor = this.state.color
     let newColor = getRandomColor()
     this.setState({
-      color: newColor
+      color: newColor,
+      childColor: getReducedColor(newColor)
     })
   }
 
   handleChildClick = event => {
     event.stopPropagation()
-    let newColor = getRandomColor()
-    this.setState({
-      childColor: newColor
-    })
+
     console.log("2")
   }
   render() {
@@ -35,9 +35,9 @@ export default class Tier1 extends Component {
     // present in our solution. What should they be replaced with?
     return (
       // <div onClick={() => {this.setState({color: this.state.color })}} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
-      <div onClick={() => this.updateColor()} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
-        <Tier2 color={getReducedColor(this.state.color)} handleChildClick={e => this.handleChildClick(e)}  />
-        <Tier2 color={getReducedColor(this.state.color)} handleChildClick={e => this.handleChildClick(e)} />
+      <div onClick={() => this.updateColors()} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
+        <Tier2 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)}  />
+        <Tier2 color={this.state.childColor} handleChildClick={e => this.handleChildClick(e)} />
       </div>
     )
   }
