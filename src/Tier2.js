@@ -20,7 +20,6 @@ export default class Tier2 extends Component {
   }
 
   handleClick = () => {
-    debugger
     this.setState({
       color: getRandomColor()
     })
