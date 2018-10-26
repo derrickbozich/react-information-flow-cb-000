@@ -10,7 +10,7 @@ export default class Tier1 extends Component {
     const initialColor = getRandomColor()
     this.state = {
       color: initialColor,
-      childColor: getReducedColor(initialColor)
+      childColor: getReducedColor(initialColor),
       grandChildColor: getReducedColor(getReducedColor(initialColor))
     }
   }
@@ -19,7 +19,7 @@ export default class Tier1 extends Component {
     let newColor = getRandomColor()
     this.setState({
       color: newColor,
-      childColor: getReducedColor(newColor)
+      childColor: getReducedColor(newColor),
       grandChildColor: getReducedColor(getReducedColor(newColor))
     })
   }
