@@ -10,8 +10,7 @@ export default class Tier1 extends Component {
     const initialColor = getRandomColor()
     this.state = {
       color: initialColor,
-      childColor: getReducedColor(initialColor),
-      grandChildColor: getReducedColor(getReducedColor(initialColor))
+      childColor: getReducedColor(initialColor)
     }
   }
 
