@@ -35,7 +35,7 @@ export default class Tier1 extends Component {
   }
 
   handleChildClick = (e) => {
-    
+    e.stopPropagation()
   }
 
   handleGrandChildClick = (e) => {
